@@ -1,0 +1,837 @@
+/* * This document has been formatted and ordered under headings and themes */
+
+/* ! ---------------------------------------------------------------------------- Tag Styling ---------------------------------------------------------------------------- */
+
+body{
+    background-color: #001220;
+    color: white;
+    overflow-x: hidden;
+    height: 5000px;
+
+    letter-spacing:3px;
+    font-size: 35px;
+    font-weight: 300;
+    font-family: Roboto;
+
+    word-spacing: 10px;
+    line-height: 45px;
+}
+
+li{list-style-type: disc; color: #004479;}
+
+li{color:white; transition: margin-left 400ms ease-in-out;}
+
+li:hover{margin-left: 10px; animation: titleShift 2s linear infinite;}
+
+a:hover{color: white;}
+
+a:visited{color: #FF3728;}
+
+a{color: white; width: min-content; height: min-content;}
+
+/* ! ---------------------------------------------------------------------------- Grid Styling ---------------------------------------------------------------------------- */
+
+.container1{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 800px;
+
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 1000px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 600px 400px 150px 600px 80px;
+    grid-auto-columns: auto;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "spacer1"
+        "name"
+        "picture"
+        "details"
+        "description"
+        "spacer2";
+}
+
+.container2{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    min-width: 800px;
+    z-index: 2;
+    top: 3500px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content max-content max-content max-content;
+    grid-auto-columns: auto;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "keySkills"
+        "education"
+        "hobbies"
+        "skillsList";
+}
+
+/* ! ---------------------------------------------------------------------------- Intro Screen ---------------------------------------------------------------------------- */
+
+.warning{
+    color:red;
+    top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    animation: warning 1800ms linear infinite, glow 1s ease-in-out infinite alternate;
+}
+
+.intro{
+    top: 200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    font-variant: small-caps;
+    animation: titleShift 2s linear infinite;
+}
+
+.effects{
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 600px;
+    z-index: 1;
+}
+
+.effectsLine1{
+    background-color: #FF3728;
+    top: 0px;
+    left: 0px;
+    width:200px;
+    height: 10px;
+    position: relative;
+    transform: rotate(50deg);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px #ff3628da;
+    animation: glitch 2500ms linear infinite, effectMove1 2s ease-in;
+}
+
+.effectsLine2{
+    background-color: #F11742;
+    top: 300px;
+    left: -40px;
+    width:200px;
+    height: 10px;
+    position: relative;
+    transform: rotate(-30deg);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px #f11743d7;
+    animation: glitch 2000ms linear infinite, effectMove2 2s ease-in;
+}
+
+.effectsLine3{
+    background-color: #A7166D;
+    top: 0px;
+    left: 500px;
+    width:200px;
+    height: 10px;
+    position: relative;
+    transform: rotate(120deg);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px #a7166dd8;
+    animation: glitch 3000ms linear infinite, effectMove3 2s ease-in ;
+}
+
+.effectsLine4{
+    background-color: #872271;
+    top: 0px;
+    left: 1000px;
+    width: 200px;
+    height: 10px;
+    position: relative;
+    transform: rotate(50deg);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px #872271ce;
+    animation: glitch 4000ms linear infinite, effectMove4 2s ease-in;
+    z-index: 0;
+}
+
+.effectsLine5{
+    background-color: #67286E;
+    top: 0px;
+    left: 1400px;
+    width:200px;
+    height: 10px;
+    position: relative;
+    transform: rotate(120deg);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px #67286ed0;
+    animation: glitch 3500ms linear infinite, effectMove5 2s ease-in;
+}
+
+.effectsLine6{
+    background-color: #2C2858;
+    top: 250px;
+    left: 1750px;
+    width:200px;
+    height: 10px;
+    position: relative;
+    transform: rotate(30deg);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px #2c2858d5;
+    animation: glitch 3000ms linear infinite, effectMove6 2s ease-in;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #A7166D;
+    animation: animateBackground 25s linear infinite, glitch 25s linear infinite;
+    bottom: 0px;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+/* ! ---------------------------------------------------------------------------- Background ---------------------------------------------------------------------------- */
+
+.backgroundImg1{
+    position: absolute;
+    width: 100%;
+    min-width: 1800px;
+    min-height: max-content;
+    z-index:2;
+}
+
+.backgroundImg2{
+    position: absolute;
+    width: 100%;
+    top: 2000px;
+    z-index:2;
+}
+
+.background1{
+    background: #001220;  
+    width: 100%;
+    min-width: 1400px;
+    height: 950px;
+    top: 0px;
+    position: absolute;
+    z-index: 0;
+}
+
+.background2{
+    background: transparent;  
+    width: 100%;
+    min-width: 1400px;
+    min-height: 3600px;
+    position: absolute;
+    overflow: hidden;
+    top: 2900px;
+    z-index: 0;
+}
+
+/* ! ---------------------------------------------------------------------------- Outro ---------------------------------------------------------------------------- */
+
+.backgroundOrb1{
+    background-color: #FF3728;
+    top: 400px;
+    left: 1500px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #FF3728;
+    animation: backgroundMove1 4s linear infinite, astroidGlitch 1000ms linear infinite;
+    animation-delay: 1000ms;
+}
+
+.backgroundOrb2{
+    background-color: #F11742;
+    top: 800px;
+    left: 2000px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #F11742;
+    animation: backgroundMove2 4s linear infinite, astroidGlitch 1500ms linear infinite;
+    animation-delay: 000ms;
+}
+
+.backgroundOrb3{
+    background-color: #A7166D;
+    top: 400px;
+    left: 2000px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #A7166D;
+    animation: backgroundMove3 4s linear infinite, astroidGlitch 1000ms linear infinite;
+    animation-delay: 3500ms;
+}
+
+.backgroundOrb4{
+    background-color: #FF3728;
+    top: 1200px;
+    left: 2000px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #FF3728;
+    animation: backgroundMove4 4s linear infinite, astroidGlitch 2000ms linear infinite;
+    animation-delay: 1500ms;
+}
+
+.backgroundOrb5{
+    background-color: #F11742;
+    top: 1400px;
+    left: 2000px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #F11742;
+    animation: backgroundMove5 4s linear infinite, astroidGlitch 1500ms linear infinite;
+    animation-delay: 3500ms;
+}
+
+.backgroundOrb6{
+    background-color: #A7166D;
+    top: 1500px;
+    left: 2000px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #A7166D;
+    animation: backgroundMove6 4s linear infinite, astroidGlitch 1000ms linear infinite;
+    animation-delay: 1000ms;
+}
+
+.backgroundOrb7{
+    background-color: #FF3728;
+    top: 1800px;
+    left: 2000px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #FF3728;
+    animation: backgroundMove7 4s linear infinite, astroidGlitch 1500ms linear infinite;
+    animation-delay: 3500ms;
+}
+
+.backgroundOrb8{
+    background-color: #F11742;
+    top: 1900px;
+    left: 2000px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #F11742;
+    animation: backgroundMove8 4s linear infinite, astroidGlitch 2000ms linear infinite;
+    animation-delay: 1500ms;
+}
+
+.backgroundOrb9{
+    background-color: #A7166D;
+    top: 600px;
+    left: 2000px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #A7166D;
+    animation: backgroundMove9 4s linear infinite, astroidGlitch 1000ms linear infinite;
+    animation-delay: 1000ms;
+}
+
+.backgroundOrb10{
+    background-color: #FF3728;
+    left: 800px;
+    top: -200px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(135deg);
+    box-shadow: 0 0 4px 4px #FF3728;
+    animation: backgroundMove10 4s linear infinite, astroidGlitch 1500ms linear infinite;
+    animation-delay: 3500ms;
+}
+
+/* ! ---------------------------------------------------------------------------- Spacers ---------------------------------------------------------------------------- */
+
+.line1{
+    position: relative;
+    background-color: #FF3728;
+    top: 50px;
+    left: -10px;
+    width: 400px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#FF3728;
+    animation: spacerShift1 2s ease-in-out infinite, glitch 3500ms linear infinite;
+}
+
+.line2{
+    position: relative;
+    background-color: #A7166D;
+    top: 40px;
+    left: 600px;
+    width: 800px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#A7166D;
+    animation: spacerShift2 2s linear infinite, glitch 4000ms linear infinite;
+}
+
+.line3{
+    position: relative;
+    background-color: #67286E;
+    top: 0px;
+    left: 300px;
+    width: 400px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#67286E;
+    animation: spacerShift3 2s linear infinite, glitch 3000ms linear infinite;
+}
+
+.line4{
+    position: relative;
+    background-color: #F11742;
+    top: -10px;
+    left: 1000px;
+    width: 1000px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#F11742;
+    animation: spacerShift4 2s linear infinite, glitch 2500ms linear infinite;
+}
+
+.line5{
+    position: relative;
+    background-color: #A7166D;
+    top: 20px;
+    left: -100px;
+    width: 800px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#A7166D;
+    animation: spacerShift5 2s ease-in-out infinite, glitch 3500ms linear infinite;
+}
+
+.line6{
+    position: relative;
+    background-color: #2C2858;
+    top: 40px;
+    left: 400px;
+    width: 600px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#2C2858;
+    animation: spacerShift6 2s ease-in-out infinite, glitch 3000ms linear infinite;
+}
+
+.line7{
+    position: relative;
+    background-color: #F11742;
+    top: 0px;
+    left: 900px;
+    width: 400px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#F11742;
+    animation: spacerShift7 2s ease-in-out infinite, glitch 3500ms linear infinite;
+}
+
+.line8{
+    position: relative;
+    background-color: #67286E;
+    top: 20px;
+    left: 1200px;
+    width: 800px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#67286E;
+    animation: spacerShift8 2s ease-in-out infinite, glitch 2000ms linear infinite;
+}
+
+.line9{
+    position: relative;
+    background-color: #FF3728;
+    top: -20px;
+    left: 1600px;
+    width: 300px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px#FF3728;
+    animation: spacerShift9 2s ease-in-out infinite, glitch 2500ms linear infinite;
+}
+
+/* ! ---------------------------------------------------------------------------- Button Styling ---------------------------------------------------------------------------- */
+
+.educationLink a{
+    box-sizing: border-box;
+    text-align: center; 
+    height: 100%;
+    padding: 0 10%;
+    background: #333;
+    display: block;
+    color: white;
+}
+
+.educationLink{
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 30px;
+    font-size: .75em;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    border: 1px solid hsla(0,0%,100%,.2);
+    transition: all .2s ease;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-family: roboto;
+    font-size: large;
+}
+
+.educationLink:before, .educationLink:after{
+        content: '^&#LKHJA&*#';
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8px 0;
+        width: 100%;
+        clip: rect(0px, 0px, 0px, 0px);
+        background: #fff;
+        color: #000;
+}
+
+.educationLink:before{
+    left: -3px;
+    top: -2px;
+    text-shadow: 2px 0 #fff;
+    box-shadow: 2px 0 #fff;
+}
+
+.educationLink:after{
+    left: 2px;
+    bottom: -2px;
+    text-shadow: -1px 0 #fff;
+    box-shadow: -1px 0 #fff;
+}
+
+.educationLink:hover{
+    background: white;
+    color: black;
+}
+
+.educationLink:hover:before{
+    animation: glitchButton 1.5s infinite linear alternate-reverse;
+}
+
+.educationLink:hover:after{
+    animation: glitchButton 2s infinite linear alternate;
+}
+
+/* ! ---------------------------------------------------------------------------- First Main Section ---------------------------------------------------------------------------- */
+
+.name h1{padding: 20px 5px 20px 5px;}
+
+.name h1{animation: titleShift 2s linear infinite;}
+
+.details a:hover{animation: titleShift 2s linear;}
+
+.spacer1, .spacer2{background-color: transparent; height: 100%; overflow: hidden;}
+
+
+.spacer1{grid-area: spacer1;}
+
+.name{grid-area: name; font-variant: small-caps;}
+
+.picture{grid-area: picture;}
+
+.details{grid-area: details; font-variant: small-caps;}
+
+.description{
+    grid-area: description;
+    text-align: left;
+    margin-left: 100px;
+}  
+
+.spacer2{grid-area: spacer2;}
+
+.img1{
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    border: 3px solid white;
+}
+
+/* ! ---------------------------------------------------------------------------- Second Main Section ---------------------------------------------------------------------------- */
+
+.keySkills{grid-area: keySkills;}
+
+.education{grid-area: education;}
+
+.edu1{}
+
+.edu2{padding-top: 50px;}
+
+.source1{padding: 30px 0 30px 0}
+
+.source2{padding: 30px 0 30px 0}
+
+.hobbies{grid-area: hobbies;}
+
+.skillsList{grid-area: skillsList;}
+
+div.keySkills,div.education{
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.t1{animation: titleShift 3000ms linear infinite; font-variant: small-caps;}
+.t2{animation: titleShift 2500ms linear infinite; font-variant: small-caps;}
+.t3{animation: titleShift 2500ms linear infinite; font-variant: small-caps;}
+.t4{animation: titleShift 3000ms linear infinite; font-variant: small-caps;}
+.t5{animation: titleShift 3000ms linear infinite; font-variant: small-caps;}
+.t6{animation: titleShift 3500ms linear infinite; font-variant: small-caps;}
+.t7{animation: titleShift 3000ms linear infinite; font-variant: small-caps;}
+.t8{animation: titleShift 3500ms linear infinite; font-variant: small-caps;}
+.t9{animation: titleShift 3000ms linear infinite; font-variant: small-caps;}
+.t10{animation: titleShift 3000ms linear infinite; font-variant: small-caps;}
+.t11{animation: titleShift 3500ms linear infinite; font-variant: small-caps;}
+.t12{animation: titleShift 3000ms linear infinite; font-variant: small-caps;}
+
+.badges1{transform: scale(1.4); margin-left: 50px;}
+.badges2{transform: scale(1.4); margin-left: 50px;}
+.badges3{transform: scale(1.4); margin-left: 70px; margin-bottom: 30px;}
+
+/* ! ---------------------------------------------------------------------------- Keyframes ---------------------------------------------------------------------------- */
+
+/* ? Used to create Glitch effect for Buttons */
+@keyframes glitchButton {
+    0.0% {clip: rect(-3px, 600px, 0px, 0px);}
+    5.8% {clip: rect(0px, 600px, 0px, 0px);}
+    11.7% {clip: rect(-3px, 600px, 0px, 0px);}
+    17.6% {clip: rect(-3px, 600px, 0px, 0px);}
+    23.5% {clip: rect(100px, 600px, 100px, 0px);}
+    29.4% {clip: rect(0px, 600px, 600px, 0px);}
+    35.2% {clip: rect(100px, 600px, 0px, 0px);}
+    41.1% {clip: rect(0px, 600px, 600px, 0px);}    
+    47.0% {clip: rect(100px, 600px, 0px, 0px);}
+    52.9% {clip: rect(-3px, 600px, 0px, 0px);}
+    58.8% {clip: rect(100px, 450px,100px, 0px);}
+    64.7% {clip: rect(0px, 450px, 0px, 0px);}
+    76.4% {clip: rect(0px, 450px, 0px, 0px);}
+    82.3% {clip: rect(0px, 450px, 0px, 0px);}
+    88.2% {clip: rect(0px, 450px, 0px, 0px);}
+    94.1% {clip: rect(0px, 450px, 0px, 0px);}
+    100% {clip: rect(0px, 450px, 0px, 0px);}
+}
+
+/* ? Used to create moving effect for Intro EffectLines */
+@keyframes effectMove1{from{left:-100px; top:-100px;} to{left: 0px; top: 0px;}}
+@keyframes effectMove2{from{left:-240px; top: 300px;} to{left: -40px; top: 300px;}}
+@keyframes effectMove3{from{left: 500px; top: -200px;} to{left: 500px; top: 0px;}}
+@keyframes effectMove4{from{left: 1000px; top: -200px;} to{left: 1000px; top: 0px;}}
+@keyframes effectMove5{from{left: 1400px; top: -200px;} to{left: 1400px; top: 0px;}}
+@keyframes effectMove6{from{left: 1950px; top: 250px;} to{left: 1750px; top: 250px;}}
+
+/* ? Used to create Glitch effect for BackgroundOrbs */
+@keyframes astroidGlitch{
+    45%{box-shadow: 0 0 3px 3px black; background-color: black;}
+    46%{box-shadow: 0 0 3px 3px white; background-color: white;}
+    47%{box-shadow: 0 0 3px 3px black; background-color: black;}
+    48%{box-shadow: 0 0 3px 3px white; background-color: white;}
+    49%{box-shadow: 0 0 3px 3px black; background-color: black;}
+    50%{box-shadow: 0 0 3px 3px white; background-color: white;}
+    51%{box-shadow: 0 0 3px 3px black; background-color: black;}
+    52%{box-shadow: 0 0 3px 3px white; background-color: white;}
+    53%{box-shadow: 0 0 3px 3px black; background-color: black;}
+    54%{box-shadow: 0 0 3px 3px white; background-color: white;}
+    55%{box-shadow: 0 0 3px 3px black; background-color: black;}
+}
+
+/* ? Used to create moving effect for BackgroundOrbs */
+@keyframes backgroundMove1{form{top: 400px; left: 1500px;} to{top: 1600px; left: -100px;}}
+@keyframes backgroundMove2{from{top: 800px; left: 2000px;} to{top: 1600px; left: -100px;}}
+@keyframes backgroundMove3{form{top: 400px; left: 2000px;} to{top: 1600px; left: -100px;}}
+@keyframes backgroundMove4{form{top: 1200px; left: 2000px;} to{top: 2400px; left: -100px;}}
+@keyframes backgroundMove5{form{top: 1400px; left: 2000px;} to{top: 2800px; left: -100px;}}
+@keyframes backgroundMove6{form{top: 1500px; left: 2000px;} to{top: 3000px; left: -100px;}}
+@keyframes backgroundMove7{form{top: 1800px; left: 2000px;} to{top: 3600px; left: -100px;}}
+@keyframes backgroundMove8{form{top: 1900px; left: 2000px;} to{top: 3800px; left: -100px;}}
+@keyframes backgroundMove9{form{top: 1200px; left: 2000px;} to{top: 2400px; left: -100px;}}
+@keyframes backgroundMove10{form{left: 800px; top: -200px;} to{top: 600px; left: -100px;}}
+
+/* ? Used  to create Glitch Effect on EffectLines & Spacer Lines*/
+@keyframes glitch{
+    47%{box-shadow: 0 0 3px 3px black;}
+    48%{box-shadow: 0 0 3px 3px white;}
+    49%{box-shadow: 0 0 3px 3px black;}
+    50%{box-shadow: 0 0 3px 3px white;}
+    51%{box-shadow: 0 0 3px 3px black;}
+    52%{box-shadow: 0 0 3px 3px white;}
+    53%{box-shadow: 0 0 3px 3px black;}
+}
+
+/* ? Used to Neon-ish Lines in Spacer1 & Spacer2 */
+@keyframes spacerShift1{0%{left: -10px;} 50%{left: 50px;} 100%{left: -10px;}}
+@keyframes spacerShift2{0%{left: 600px;} 50%{left: 550px;} 100%{left: 600px;}}
+@keyframes spacerShift3{0%{left: 400px;} 50%{left: 200px;} 100%{left: 400px;}}
+@keyframes spacerShift4{0%{left: 1000px;} 50%{left: 800px;} 100%{left: 1000px;}}
+@keyframes spacerShift5{0%{left: -100px;} 50%{left: 0px;} 100%{left: -100px;}}
+@keyframes spacerShift6{0%{left: 400px;} 50%{left: 300px;} 100%{left: 400px;}}
+@keyframes spacerShift7{0%{left: 900px;} 50%{left: 950px;} 100%{left: 900px;}}
+@keyframes spacerShift8{0%{left: 1200px;} 50%{left: 1150px;} 100%{left: 1200px;}}
+@keyframes spacerShift9{0%{left: 1600px;} 50%{left: 1450px;} 100%{left: 1600px;}}
+
+/* ? Used to create moving effect for Intro Warning */
+@keyframes warning{0%{font-size: 40px;} 50%{font-size: 35px;} 100%{font-size: 40px;}}
+
+/* ? Used to create Glitch effect on Intro Title & Contact Link & All Title in Second Main Section */
+@keyframes titleShift{
+    0%{color: white;text-shadow: 2px 2px rgb(255, 255, 255);}
+    1%{text-shadow: -2px -2px rgb(255, 255, 255); left: -2px;}
+    2%{text-shadow: 2px 2px rgb(255, 255, 255); left: 2px;}
+    3%{text-shadow: -2px -2px rgb(255, 255, 255); left: -2px;}
+    4%{text-shadow: 2px 2px rgb(255, 255, 255); left: 2px;}    
+    5%{text-shadow: -2px -2px rgb(255, 255, 255);left: 4px;}
+    6%{text-shadow: 2px 2px rgb(255, 255, 255); left: -4px;}    
+    7%{text-shadow: -2px -2px rgb(255, 255, 255); left: 3px}
+    8%{text-shadow: 2px 2px rgb(255, 255, 255); left: -3px}    
+    9%{text-shadow: -2px -2px rgb(255, 255, 255); left: -2px;}
+    10%{text-shadow: 2px 2px rgb(255, 255, 255); left: 2px;}    
+    11%{text-shadow: -2px -2px rgb(255, 255, 255); left: -3px;}
+    12%{text-shadow: 2px 2px rgb(255, 255, 255); left: 3px;}    
+    13%{text-shadow: -2px -2px rgb(255, 255, 255);left: -2px}
+    14%{text-shadow: 2px 2px rgb(255, 255, 255); left: 2px}    
+    15%{text-shadow: -2px -2px rgb(255, 255, 255); left: 1px}
+    16%{text-shadow: 2px 2px rgb(255, 255, 255); left: -1px}    
+    17%{text-shadow: -2px -2px rgb(255, 255, 255); left: 5px;}
+    18%{text-shadow: 2px 2px rgb(255, 255, 255); left: -5px;}    
+    19%{text-shadow: -2px -2px rgb(255, 255, 255); left: 0px;}
+    20%{color: white; text-shadow: none;}
+}
+
+/* ?  Used to Move & Rotate cubes on Intro Screen*/
+@keyframes animateBackground{
+    0%{transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0;}
+    100%{transform: translateY(-1500px) rotate(720deg); opacity: 0; border-radius: 50%;}
+}
