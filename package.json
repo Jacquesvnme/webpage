@@ -11,10 +11,9 @@
   "description": "This is a repository dedicated to sharing the projects that I have build \r and is use to showcase of my GitHub Profile",
   "main": "main.js",
   "scripts": {
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Jacquesvnme",
   "license": "ISC"

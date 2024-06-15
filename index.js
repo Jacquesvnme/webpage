@@ -67,7 +67,7 @@ function animate(){
     nova.rotation.z += 0.001;
     nova.rotation.x += 0.001;
     
-    console.log(scrollY);
+    //console.log(scrollY);
     
     renderer.setSize(window.innerWidth, window.innerHeight);
 
