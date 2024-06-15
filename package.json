@@ -4,5 +4,15 @@
   },
   "devDependencies": {
     "vite": "^5.3.1"
-  }
+  },
+  "name": "webpage",
+  "version": "1.0.0",
+  "description": "This is a repository dedicated to sharing the projects that I have build \r and is use to showcase of my GitHub Profile",
+  "main": "main.js",
+  "scripts": {
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC"
 }
