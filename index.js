@@ -54,7 +54,7 @@ controls.addEventListener('change', renderer);
 controls.enableZoom = false;
 
 let loader = new GLTFLoader();
-loader.load('./models/supernova_remnant__lighting_2.glb', function(gltf){
+loader.load('./supernova_remnant__lighting_2.glb', function(gltf){
     //Reduce the nova size by half
     nova = gltf.scene.children[0];
     nova.scale.set(5, 5, 5);
