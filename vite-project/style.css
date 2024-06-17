@@ -15,20 +15,19 @@
 
 @font-face{ font-family: Elounda; src: url('./Elounda-Regular.otf'); }
 
-h4, h5, h6{
-  font-family: Elounda;
-}
+h1,h2,h3,h4, h5, h6{font-family: Elounda;}
 
 body{
   margin: 0;
   display: flexbox;
   place-items: center;
   min-width: 900px;
-  min-height: 100vh;
+  min-height: 1000vh;
 
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 24px;
 }
 
 #app{
@@ -39,7 +38,17 @@ body{
 }
 
 #model{
-  margin: -150px;
+  margin: -500px;
+}
+
+.nova_model{
+  position:absolute;
+  min-width: 800px;
+}
+
+#profile_img{
+  width: 200px;
+  height: 200px;
 }
 
 .intro{
@@ -63,10 +72,14 @@ body{
   align-items: center;
 }
 
+.name_text{
+  font-size: 60px;
+}
+
 .flex-container{
-  position: relative;
+  position: absolute;
   display: flex;
-  top: 1200px;
+  top: 1550px;
 
   flex-direction: column;
   flex-wrap: nowrap;
@@ -74,8 +87,9 @@ body{
   align-items: center;
   align-content: center;
 
-  border: 1px red solid;
-  width: 100%;
+  max-width: 1800px;
+  min-width: 800px;
+  width: calc(100% - 120px);
 }
 
 .flex-items:nth-child(1){
@@ -83,10 +97,11 @@ body{
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto;
-  order: 0;
+  align-self: center;
+  order: 1;
 
-  padding: 100px 0px 100px 0px;
+  width: 100%;
+  border: 1px red solid;
 }
 
 .flex-items:nth-child(2){
@@ -94,9 +109,10 @@ body{
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  height: max-content;
+  align-self: left;
+  order: 2;
+  
+  border: 1px red solid;
 }
 
 .flex-items:nth-child(3){
@@ -104,8 +120,10 @@ body{
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto;
-  order: 0;
+  align-self: right;
+  order: 3;
+  
+  border: 1px red solid;
 }
 
 .flex-items:nth-child(4){
@@ -113,6 +131,19 @@ body{
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto;
-  order: 0;
+  align-self: left;
+  order: 4;
+
+  border: 1px red solid;
+}
+
+.flex-items:nth-child(5){
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: right;
+  order: 5;
+
+  border: 1px red solid;
 }

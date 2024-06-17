@@ -67,23 +67,33 @@ export function setup3D(element) {
     function animate(){
         nova.rotation.z += 0.0005;
         nova.rotation.x += 0.0005;
-        
-        //console.log(scrollY);
-        
+
         renderer.setSize(window.innerWidth, window.innerHeight);
-    
-        if (scrollY < 850) {
-            $(".text").hide();
+
+        console.log(scrollY);
+
+        var name = $("#name");
+
+        if (scrollY > 1520) {
+            name.animate({height: '500px'}, "slow");
+        } else {
+            name.animate({opacity: '1.0'}, "slow");
         }
-    
-        if (scrollY > 1200 && scrollY < 2000) {
-            $(".text").fadeIn(1500); 
-        } 
-    
-        if (scrollY > 2350) {
-            $(".text").hide();
-        }
-    
+
+        /* TODO start here >> fix animate*/
+
+        /*        
+            $("#socials").fadeOut(1000),
+            $("#description").fadeOut(1000),
+            $("#pimg").fadeOut(1000),
+            $("#ot").fadeOut(1000);
+        
+            $("#socials").fadeIn(1000),
+            $("#description").fadeIn(1000),
+            $("#pimg").fadeIn(1000),
+            $("#ot").fadeIn(1000);
+        */
+
         window.onscroll = function () {
             if (scrollY > 0) {
             nova.rotation.x += 0.007;
