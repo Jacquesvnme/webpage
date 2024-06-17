@@ -72,12 +72,10 @@ export function setup3D(element) {
 
         console.log(scrollY);
 
-        var name = $("#name");
-
         if (scrollY > 1520) {
-            name.animate({height: '500px'}, "slow");
+            $("#name").animate({height: '500px'}, "slow");
         } else {
-            name.animate({opacity: '1.0'}, "slow");
+            $("#name").animate({opacity: '1.0'}, "slow");
         }
 
         /* TODO start here >> fix animate*/
