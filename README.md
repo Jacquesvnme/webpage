@@ -10,5 +10,6 @@ You can find my github profile under username Jacquesvnme
 
 ## Credits given
 
-3D model found in the website is not mine. Model credit to [Aiekick](https://github.com/aiekick)
+The 3D model, Supernova, found in the website is not mine. Model credit to [Aiekick](https://github.com/aiekick)
 I have used this model under the Creative Commons Attribution License found at [sketchfab](https://sketchfab.com/3d-models/supernova-remnant-lighting-2-68cbcb486c7f41f2b842a36a543a54a1).
+License found under [Creative Commons](https://creativecommons.org/licenses/by/4.0/)
