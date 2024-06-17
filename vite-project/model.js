@@ -10,7 +10,7 @@ export function setup3D(element) {
     let scene, camera, renderer, nova;
     
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
+    scene.background = new THREE.Color(0x040406);
     
     camera = new THREE.PerspectiveCamera(40, window.innerWidth/window.innerHeight, 1, 5000);
     camera.rotation.y = 45/180*Math.PI;
@@ -65,8 +65,8 @@ export function setup3D(element) {
     });
     
     function animate(){
-        nova.rotation.z += 0.001;
-        nova.rotation.x += 0.001;
+        nova.rotation.z += 0.0005;
+        nova.rotation.x += 0.0005;
         
         //console.log(scrollY);
         
@@ -86,8 +86,8 @@ export function setup3D(element) {
     
         window.onscroll = function () {
             if (scrollY > 0) {
-            nova.rotation.x += 0.008;
-            nova.rotation.z += 0.008;
+            nova.rotation.x += 0.007;
+            nova.rotation.z += 0.007;
             }
         }
     

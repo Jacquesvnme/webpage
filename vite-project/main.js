@@ -3,12 +3,12 @@ import { setup3D } from './model.js'
 
 document.querySelector('#app').innerHTML = `
   <div class="intro">
-    <div class="intro_text">Welcome</div>
+    <div class="intro_text"><h4>Welcome</h4></div>
   </div>
-  <div id="model"></div>
+  <div class="nova_model" id="model"></div>
   <div class="flex-container">
-    <div class="flex-items">Webpage being redesigned</div>
-    <div class="flex-items">Still Being Implemented</div>
+    <div class="flex-items">webpage being redesigned</div>
+    <div class="flex-items">still being implemented</div>
   </div>
 `
 
