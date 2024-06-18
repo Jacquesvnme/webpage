@@ -19,7 +19,7 @@ document.querySelector('#app').innerHTML = `
       <img src="./profile.jpg" alt="" id="profile_img">
     </div>
     <div class="flex-items" id="description">
-      I'm a student currently studying at Belgium Campus <br>
+      Im a student currently studying at Belgium Campus <br>
       I have learnt a wide variety of programming languages and frameworks <br>
       I believe my problem solving skills is a highly valuable skill that <br>
       will help me solve any problem that might come my way <br>
