@@ -1,4 +1,4 @@
-import './style.css'
+//import './style.css'
 import { setup3D } from './model.js'
 
 document.querySelector('#app').innerHTML = `
