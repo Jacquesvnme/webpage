@@ -4,12 +4,62 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./jquery-3.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./calc.js"></script>
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-		<script type="module" src="./jquery-3.7.1.js"></script>
-    <script type="module" src="./main.js"></script>
-    <script src="./calc.js"></script>
+    <div id="app">
+      <div class="flex-container">
+        <div class="flex-items" id="intro">
+          <h4 class="intro_text">Welcome</h4>
+          <h6 class="intro_text_subtitle">Click me</h6>
+        </div>
+        <div class="flex-items">
+          <div class="flex-container-dashboard" id="dashboard">
+            <div class="flex-items-dashboard">
+              <div class="flex-name-logo">
+                <img src="./logo.png" id="logo" class="flex-items-name-logo">
+                <div class="flex-name-logo">
+                  <h3 class="flex-items-name-logo">Jacques</h3>
+                  <h4 class="flex-items-name-logo">Van Niekerk</h4>
+                </div>
+              </div>
+              <img src="./profile.jpg" id="profile_img">
+              <h4>Title</h4>
+              <div class="title">Student - Software Engineer</div>
+              <h4>Location</h4>
+              <div class="location">South Africa, Benoni</div>
+              <div class="">Still Being Implemented</div>
+            </div>
+            <div class="flex-items-dashboard">
+              <div class="flex-items-rSide">
+                <form id="group1" class="Navbar" onclick="navChange()">
+                  <input type="radio" id="home_btn" name="group1" value="home">
+                  <label for="home_btn" id="lbl1">Home</label><br>
+                  <div class="spacer"></div>
+                  <input type="radio" id="about_btn" name="group1" value="about">
+                  <label for="about_btn" id="lbl2">About Me</label><br>
+                  <div class="spacer"></div>
+                  <input type="radio" id="job_btn" name="group1" value="job">
+                  <label for="job_btn" id="lbl3">Job Related</label><br>
+                  <div class="spacer"></div>
+                  <input type="radio" id="other_btn" name="group1" value="other">
+                  <label for="other_btn" id="lbl4">Other</label><br>
+                  <div class="spacer"></div>
+                  <input type="radio" id="contact_btn" name="group1" value="contact">
+                  <label for="contact_btn" id="lbl5">Contact</label><br>
+                </form>
+              </div>
+              <div class="flex-items-rSide">
+                Still Being Implemented
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

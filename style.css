@@ -76,7 +76,6 @@ body{
   max-width: 1800px;
   min-width: 800px;
   width: calc(100% - 120px);
-  border: 1px red solid;
 }
 
 .flex-items:nth-child(1){
