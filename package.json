@@ -1,7 +1,6 @@
 {
-  "homepage":"https://jacquesvnme.github.io/webpage",
-  "name": "vite-project",
-  "private": false,
+  "name": "test_project",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,10 +10,6 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
     "vite": "^5.2.0"
-  },
-  "dependencies": {
-    "three": "^0.165.0"
   }
 }
